@@ -1,8 +1,7 @@
-# Lunch & Learn: Unit Testing & Integration Testing
+#  Unit Testing & Integration Testing
 
-Welcome to my second Lunch & Learn!
 This one is all about Unit testing and Integration testing in C#, though of course the concepts will apply in most other languages.
-The code here heavily uses the concepts from my previous L&L on dependency injection. 
+The code here heavily uses the concepts of dependency injection. 
 If you need a refresher, you can check out the [Dependency Injection Workshop repository](https://bitbucket.org/spheretechsol/dependencyinjectionworkshop/src/master/).
 
 ## Table of Contents
@@ -69,7 +68,7 @@ There are additional qualities that re nice to have in a unit test:
 
       * null values for reference types
       * 0, -1, int.MinValue, and int.MaxValue for integers
-      * blank strings, whitespace-only strings, strings with leading or trailing whitespace, strings with crazy symbols like &amp;nbsp; or emojis, strings with Chinese or Japanese characters, strings with vowels with different àccént marks
+      * blank strings, whitespace-only strings, strings with leading or trailing whitespace, strings with crazy symbols like &amp;nbsp; or emojis, strings with Chinese or Japanese characters, strings with vowels with different Ã ccÃ©nt marks
       * empty collections and, if applicable, collections with duplicates
       * purposely misconfigured settings objects
       * anonymous objects where `dynamic` is a possible generic type 
