@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Mom",
+    "version": "1.0"
+  },
+  "paths": {
+    "/makelemonade": {
+      "get": {
+        "tags": [
+          "Mom"
+        ],
+        "summary": "Ask tired mom to make a pitcher of lemonade for $3.20.",
+        "description": "This is the endpoint for mom to make a pitcher of lemonade. \r\nShe requires at least $3.20 in cash per pitcher.\r\nShe will keep the change so do your math properly.\r\nShe gets more and more tired after every request. \r\nWhen she needs a break she will return a 429 Too Many Requests response and will need a short break.",
+        "operationId": "MakeLemonade",
+        "parameters": [
+          {
+            "name": "cash",
+            "in": "query",
+            "description": "How much money was given to mom to make the lemonade.",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A successfully made pitcher of 8 cups.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pitcher"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Mom needs at least $3.20 per pitcher to break even."
+          },
+          "429": {
+            "description": "Too many requests for lemonade. Mom needs a break."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pitcher": {
+        "type": "object",
+        "properties": {
+          "cups": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

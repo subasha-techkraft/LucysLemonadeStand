@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[PriceEntries]
+(
+	[Item] NVARCHAR(50) NOT NULL PRIMARY KEY,
+	[Price] DECIMAL(10, 2) NOT NULL
+)
